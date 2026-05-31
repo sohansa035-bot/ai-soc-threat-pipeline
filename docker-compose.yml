@@ -1,0 +1,7 @@
+services:
+  soc-dashboard:
+    build: .
+    container_name: ai_soc_copilot
+    ports:
+      - "8501:8501"
+    restart: unless-stopped
