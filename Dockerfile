@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 5. Copy the rest of your local source code into the container
 COPY . .
 
-# 6. Inform Docker that the container listens on port 8501 at runtime
-EXPOSE 8501
+# 6. Inform Docker that the container listens on ports 8501 and 8000
+EXPOSE 8501 8000
 
-# 7. Define the command to run your app automatically on startup
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+# 7. Default command (can be overridden by docker-compose)
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]

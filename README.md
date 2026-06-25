@@ -12,9 +12,10 @@ pinned: false
 > **AI-Powered Threat Detection • Correlation • Incident Response**
 
 [![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)]()
-[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
-[![Tests](https://img.shields.io/badge/tests-passing-brightgreen.svg)]()
-[![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Lint](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/lint.yml/badge.svg)](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/lint.yml)
+[![Tests](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/test.yml/badge.svg)](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/test.yml)
+[![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Supported-green.svg)]()
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.20+-red.svg)]()
 [![Docker](https://img.shields.io/badge/Docker-Supported-blue.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -150,44 +151,52 @@ SOC Analyst
 
 ---
 
-## 📈 Metrics
 
-| Metric                | Value        |
-| :---                  | :---         |
-| Log Processing        | 500 logs/sec |
-| Detection Accuracy    | 94%          |
-| Average Response Time | 1.2 sec      |
-| False Positive Rate   | 6%           |
 
----
+## 🛠️ Engineering Trade-offs
 
-## 🛠️ Engineering Decisions
+**Why FastAPI?**
+- Future REST integration and standardized HTTP endpoints.
+- Async support for high-throughput log ingestion.
 
-**Why Streamlit & Python?**
-- Rapid prototyping for data applications
-- Seamless integration with Python AI/ML ecosystem
+**Why Streamlit?**
+- Rapid prototyping for data applications.
+- Minimal frontend overhead for deploying operational dashboards.
 
 **Why Docker?**
-- Easy deployment
-- Reproducibility
+- Portable deployments across different environments.
+- Ensures reproducibility for the API and Dashboard.
 
 **Why AI Classification?**
-- Reduce analyst workload
-- Improve prioritization
+- Reduces SOC analyst workload.
+- Improves incident prioritization through intelligent scoring.
 
 ---
 
 ## 📁 Folder Structure
 
 ```text
-AI-SOC/
+ai-soc-threat-pipeline/
 ├── api/
-├── models/
-├── parser/
+│   ├── __init__.py
+│   └── main.py
 ├── classifier/
+│   ├── __init__.py
+│   └── engine.py
+├── parser/
+│   ├── __init__.py
+│   └── log_parser.py
+├── models/
+│   ├── __init__.py
+│   └── schemas.py
 ├── dashboard/
-├── docker/
-├── assets/
+│   └── app.py
+├── sample_logs/
+├── tests/
+├── .github/
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
 └── README.md
 ```
 
