@@ -1,4 +1,5 @@
 # AI-SOC Dashboard
+![Dashboard](../assets/dashboard.png)
 
 This directory contains the Streamlit frontend application for the AI-SOC Threat Pipeline.
 

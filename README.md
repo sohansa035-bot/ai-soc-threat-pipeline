@@ -6,7 +6,7 @@
 [![Lint](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/lint.yml/badge.svg)](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/lint.yml)
 [![Tests](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/test.yml/badge.svg)](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/test.yml)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-Supported-green.svg)]()
+[![FastAPI](https://img.shields.io/badge/FastAPI-Active-green.svg)]()
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.20+-red.svg)]()
 [![Docker](https://img.shields.io/badge/Docker-Supported-blue.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -14,6 +14,8 @@
 > **AI-SOC Threat Pipeline is an intelligent Security Operations Center (SOC) platform that automates log analysis, threat detection, incident correlation, and response recommendations using AI. It helps reduce analyst workload and improves response time by transforming raw security events into actionable insights.**
 
 ## 📖 Overview
+
+**AI-SOC Threat Pipeline is an educational SOC automation platform designed to demonstrate modern security operations workflows using modular Python architecture and future-ready AI integration.**
 
 ### The Problem
 
@@ -87,6 +89,8 @@ Please refer to [docs/design.md](docs/design.md) for detailed architecture diagr
   ]
 }
 ```
+
+*Note: The `confidence` value represents a heuristic classification score in v1.0. Future updates will introduce genuine ML probability scoring.*
 
 ---
 
