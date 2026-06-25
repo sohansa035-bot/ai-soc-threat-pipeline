@@ -11,7 +11,7 @@
 [![Docker](https://img.shields.io/badge/Docker-Supported-blue.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **AI-SOC Threat Pipeline is an intelligent Security Operations Center (SOC) platform that automates log analysis, threat detection, incident correlation, and response recommendations using AI. It helps reduce analyst workload and improves response time by transforming raw security events into actionable insights.**
+> **AI-SOC Threat Pipeline is an intelligent Security Operations Center (SOC) platform that automates log analysis, threat detection, incident correlation, and response recommendations using rule-based threat analysis with a modular architecture designed for future AI-powered log analysis. It helps reduce analyst workload and improves response time by transforming raw security events into actionable insights.**
 
 ## 📖 Overview
 
@@ -32,7 +32,7 @@ Manual analysis slows down incident response and increases Mean Time to Respond 
 ### The Solution
 
 AI-SOC Threat Pipeline combines:
-- AI-assisted log analysis
+- Rule-based log analysis
 - Threat classification
 - Alert correlation
 - Automated incident reports
@@ -42,8 +42,9 @@ to help SOC analysts investigate incidents faster.
 
 ### ✨ Key Features
 
-- AI-powered log analysis
+- Rule-based log analysis
 - Threat intelligence correlation
+- AI-ready architecture (v2.0 roadmap)
 - Alert prioritization
 - Incident timeline generation
 - Risk scoring
@@ -59,7 +60,8 @@ Please refer to [docs/design.md](docs/design.md) for detailed architecture diagr
 
 ## 💻 Tech Stack
 
-- **Backend & Visualization:** Python, Streamlit
+- **Backend:** Python, FastAPI
+- **Dashboard:** Streamlit
 - **AI Integration (Planned for v2.0):** OpenAI
   *Currently using heuristic fast-path logic for v1.0. Future integration will use OpenAI (`gpt-4o-mini`) to analyze unstructured logs for zero-day threat correlation.*
 - **Deployment:** Docker
@@ -77,6 +79,8 @@ Please refer to [docs/design.md](docs/design.md) for detailed architecture diagr
 ---
 
 ## 📊 Example Output
+
+*Example output for the provided `failed_login.log`.*
 
 ```json
 {
