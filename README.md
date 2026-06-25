@@ -11,7 +11,7 @@ pinned: false
 
 > **AI-Powered Threat Detection • Correlation • Incident Response**
 
-[![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)]()
+[![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/releases/tag/v1.0.0)
 [![Lint](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/lint.yml/badge.svg)](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/lint.yml)
 [![Tests](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/test.yml/badge.svg)](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/test.yml)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
@@ -85,6 +85,16 @@ Please refer to [docs/design.md](docs/design.md) for detailed architecture diagr
 
 ## 📊 Example Output
 
+```text
+Sample Log
+      ↓
+Parser
+      ↓
+Classifier
+      ↓
+JSON Output
+```
+
 ```json
 {
   "severity": "High",
@@ -101,8 +111,8 @@ Please refer to [docs/design.md](docs/design.md) for detailed architecture diagr
 ## 🛠️ Engineering Trade-offs
 
 **Why FastAPI?**
-- Future REST integration and standardized HTTP endpoints.
-- Async support for high-throughput log ingestion.
+- Currently powers the active REST API with standardized HTTP endpoints.
+- Async support handles high-throughput log ingestion with ease.
 
 **Why Streamlit?**
 - Rapid prototyping for data applications.
@@ -171,6 +181,8 @@ ai-soc-threat-pipeline/
 
 ---
 
-## 📄 License
-
 [MIT](LICENSE)
+
+---
+
+*Built to demonstrate AI-assisted SOC workflows, modular Python architecture, and modern software engineering practices.*
