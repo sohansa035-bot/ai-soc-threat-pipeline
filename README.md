@@ -104,6 +104,7 @@ SOC Analyst
 
 ---
 
+<!-- Uncomment when assets are ready
 ## 📸 Screenshots
 
 ### Dashboard
@@ -132,6 +133,7 @@ SOC Analyst
 ![Demo GIF](assets/demo.gif)
 
 *Receive Log → AI Analysis → Threat Classification → Dashboard → Generated Report*
+-->
 
 ---
 
