@@ -53,7 +53,6 @@ to help SOC analysts investigate incidents faster.
 - Threat intelligence correlation
 - Alert prioritization
 - Incident timeline generation
-- MITRE ATT&CK mapping
 - Risk scoring
 - Automated reports
 - Dashboard
@@ -61,80 +60,26 @@ to help SOC analysts investigate incidents faster.
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Architecture & Design
 
-```mermaid
-flowchart LR
-    A[Firewall / IDS / EDR Logs] --> B[Log Parser]
-    B --> C[Threat Intelligence Engine]
-    C --> D[AI Analysis Engine]
-    D --> E[Threat Classification]
-    E --> F[Risk Scoring]
-    F --> G[Incident Timeline]
-    G --> H[Dashboard]
-    G --> I[Automated Report]
-```
-
----
-
-## 🎯 Threat Processing Flow
-
-```text
-Incoming Logs
-      ↓
-Normalization
-      ↓
-Threat Correlation
-      ↓
-AI Classification
-      ↓
-Risk Score
-      ↓
-Incident Report
-      ↓
-SOC Analyst
-```
-
----
+Please refer to [docs/design.md](docs/design.md) for detailed architecture diagrams, threat processing workflows, and component responsibilities.
 
 ## 💻 Tech Stack
 
 - **Backend & Visualization:** Python, Streamlit
-- **AI Integration:** OpenAI
+- **AI Integration (Planned for v2.0):** OpenAI
+  *Currently using heuristic fast-path logic for v1.0. Future integration will use OpenAI (`gpt-4o-mini`) to analyze unstructured logs for zero-day threat correlation.*
 - **Deployment:** Docker
 
 ---
 
-<!-- Uncomment when assets are ready
 ## 📸 Screenshots
 
 ### Dashboard
 ![Dashboard](assets/dashboard.png)
 
-### Threat Timeline
-![Threat Timeline](assets/threat_timeline.png)
-
 ### Alert Panel
 ![Alert Panel](assets/alert_panel.png)
-
-### Incident Report
-![Incident Report](assets/incident_report.png)
-
-### Risk Score
-![Risk Score](assets/risk_score.png)
-
-### Charts
-![Charts](assets/charts.png)
-
----
-
-## 🎥 Demo GIF
-
-### Incident Resolution Flow (Demo)
-![Demo GIF](assets/demo.gif)
-
-*Receive Log → AI Analysis → Threat Classification → Dashboard → Generated Report*
--->
 
 ---
 
