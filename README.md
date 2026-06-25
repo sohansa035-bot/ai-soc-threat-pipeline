@@ -1,15 +1,6 @@
----
-title: AI-SOC Threat Pipeline
-emoji: 🛡️
-colorFrom: red
-colorTo: yellow
-sdk: docker
-pinned: false
----
-
 # 🛡️ AI-SOC Threat Pipeline
 
-> **AI-Powered Threat Detection • Correlation • Incident Response**
+> **Intelligent Threat Detection & Incident Response**
 
 [![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/releases/tag/v1.0.0)
 [![Lint](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/lint.yml/badge.svg)](https://github.com/sohansa035-bot/ai-soc-threat-pipeline/actions/workflows/lint.yml)
@@ -85,22 +76,15 @@ Please refer to [docs/design.md](docs/design.md) for detailed architecture diagr
 
 ## 📊 Example Output
 
-```text
-Sample Log
-      ↓
-Parser
-      ↓
-Classifier
-      ↓
-JSON Output
-```
-
 ```json
 {
   "severity": "High",
   "attack_type": "Brute Force",
   "confidence": 96,
-  "recommended_action": "Block IP"
+  "recommended_action": "Block IP",
+  "technical_indicators": [
+    "Sequential 401 Unauthorized codes detected"
+  ]
 }
 ```
 
